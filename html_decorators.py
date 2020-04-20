@@ -1,21 +1,24 @@
 def div(func):
-    # You have to code here!
-    pass
+    def wrapper(nombre):
+    	return f'<div>{func(nombre)}</div>'
+    return wrapper
 
 
 def article(func):
-    # You have to code here!
-    pass
+    def wrapper(nombre):
+    	return f'<article>{func(nombre)}</article>'
+    return wrapper
 
 
 def p(func):
-    # You have to code here!
-    pass
+    def wrapper(nombre):
+    	return f'<p>{func(nombre)}</p>'
+    return wrapper
 
 
 # Here you must apply the decorators, uncomment this later
 # @div
-# @article
+@article
 # @p
 def saludo(nombre):
     return f'¡Hola {nombre}, ¿Cómo estás?'
